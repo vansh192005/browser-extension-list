@@ -1,0 +1,334 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background: linear-gradient(180deg, #040918 0%, #091540 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  font-weight: 200;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  max-width: 1600px;
+}
+
+/* Header with theme icon */
+
+.header {
+  display: flex;
+  /* border: 2px solid white; */
+  height: 2rem;
+  width: 99%;
+  position: relative;
+  top: 2rem;
+  margin: auto;
+  right: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem;
+  background-color: hsl(226, 25%, 17%);
+  padding: 0.7rem;
+}
+
+.header img {
+  height: 2rem;
+}
+
+.header p {
+  position: absolute;
+  left: 3.3rem;
+  z-index: 1;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+/* Extension List heading  */
+
+.extensionHeading {
+  display: flex;
+  margin-top: 6rem;
+  justify-content: space-between;
+}
+
+.extensionHeading {
+  font-size: 24px;
+}
+
+/* Extension List Heading Buttons */
+
+.extensionBtns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.extensionBtns button {
+  border-radius: 999px;
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+  border: none;
+  margin: 0.5rem; 
+  background-color: hsl(225, 23%, 24%);
+  color: white;
+}
+
+.extensionBtns button.active {
+  background-color: hsl(3, 71%, 56%);
+  color: hsl(226, 25%, 17%);
+}
+
+/* Cards or List Items */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2rem auto ; 
+  gap: 3.5rem;
+  /* padding: 2rem; */
+}
+
+.list-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+  width: 310px;
+  border: 1px solid hsl(226, 11%, 37%);
+  border-radius: 1rem;
+  /* margin: 1rem; */
+  padding: 1.5rem;
+  background-color: hsl(226, 25%, 17%);
+}
+
+.description-part {
+  display: flex;
+}
+
+.main-content {
+  margin: 0 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.main-content p {
+  color: hsl(0, 0%, 78%);
+  font-weight: 100;
+}
+
+.buttons-part {
+  display: flex;
+  /* margin-top: 50px; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons-part button {
+  background-color: ;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 999px;
+  border: none;
+  background-color: hsl(225, 23%, 24%);
+}
+
+/* Toggle Button Styling */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+/* Hide default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider Track */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #666;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+/* Slider Circle */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+/* When checked: move circle right and change color */
+.switch input:checked + .slider {
+  background-color: #3cf07b;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(16px);
+}
+
+/* Light theme styling */
+body.light-theme {
+  background: hsl(217, 61%, 90%);
+}
+
+body.light-theme .header {
+  background: hsl(200, 60%, 99%);
+}
+
+body.light-theme .extensionHeading {
+  color: hsl(227, 75%, 14%);
+}
+
+body.light-theme .list-items {
+  background: hsl(200, 60%, 99%);
+  color: hsl(227, 75%, 14%);
+}
+
+body.light-theme button {
+  background: hsl(0, 0%, 93%);
+  color: hsl(227, 75%, 14%);
+}
+
+body.light-theme .main-content p {
+  color: hsl(226, 11%, 37%);
+}
+
+/* All Active and Inactive button toggle effect  */
+.hidden {
+  display: none;
+  background-color: hsl(3, 71%, 56%);
+  color: hsl(227, 75%, 14%);
+}
+
+/* Footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* @media (max-width: 480px) {
+  .extensionHeading {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .extensionBtns {
+    margin-top: 1rem;
+  }
+
+  .list-items {
+    margin: 0.5rem;
+  }
+
+  .cards{
+    margin: 2rem auto;
+  }
+}
+ */
+
+
+ /* Tablet Devices (<= 768px) */
+@media (max-width: 768px) {
+  .cards {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .list-items {
+    width: 80%;
+  }
+
+  .extensionHeading {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .extensionBtns {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .header p{
+    display: none;
+  }
+}
+
+/* Mobile Devices (<= 480px) */
+@media (max-width: 480px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .list-items {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .main-content h3 {
+    font-size: 18px;
+  }
+
+  .main-content p {
+    font-size: 14px;
+  }
+
+  .buttons-part button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .header {
+    flex-direction: column;
+    height: auto;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .header p {
+    display: none;
+  }
+
+  .extensionHeading {
+    font-size: 20px;
+  }
+}
+
